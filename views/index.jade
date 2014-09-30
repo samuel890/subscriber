@@ -1,0 +1,58 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/style.css')
+  body#login
+    div#login-background
+    
+    div#wrap
+      // Header
+      div#header
+        h1
+          a(href="#") Subscriber
+      // LOGIN BOX
+      div#main-body
+        div.inner
+          div.title.first-step
+            h2 Welcome Back!
+          div.title.second-step.hidden
+          form(class="fancy-label", action="/")
+            div
+              p.text
+                span
+                  label(for="email") Email
+                  input(type="email", name="email", id="email", placehoder="Email")
+              p.text
+                span
+                  label(for="password") Password
+                  input(type="password", name="password", id="password", placeholder="Password")
+
+            p.forgot
+              a(href="/reset") Forgot your password?
+            p.remember
+              label Remember me
+                input(type="checkbox", name="remember", value="true", checked="checked")
+            p.submit
+              button(class="button blue" type="submit")
+                span Sign in to your account
+
+
+      // FOOTER
+      div#footer
+        a(href="/register") Don't have an account?
+          span Sign up
+
+      // END FOOTER
+      div#footer-spacer
+
+      div#bottom
+        ul
+          li.first
+            a(href="#") Privacy Policy
+          li
+            a(href="#") Contact
+          li.last
+            a(href="#") Subscriber
+
+
